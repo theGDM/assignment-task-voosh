@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------------------------------------------------------------- toasts
+   react-toastify ships a rainbow gradient progress bar and its own font stack. These variables
+   are the supported way to retheme it, so nothing here needs !important. Values mirror
+   src/theme.js — CSS can't import the JS tokens, so they're duplicated deliberately. */
+:root {
+  --toastify-color-light: #FFFFFF;
+  --toastify-text-color-light: #10201B;
+  --toastify-color-success: #0E7C5A;
+  --toastify-color-error: #BC3B2C;
+  --toastify-color-info: #56655F;
+  --toastify-color-progress-light: #0E7C5A;
+  --toastify-color-progress-success: #0E7C5A;
+  --toastify-color-progress-error: #BC3B2C;
+  --toastify-font-family: "Lexend Deca", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --toastify-toast-min-height: 0;
+  --toastify-toast-width: 34rem;
+}
+
+.Toastify__toast {
+  align-items: center;
+  padding: 1.2rem 1.4rem;
+  border: 0.1rem solid #E1E8E5;
+  border-radius: 0.6rem;
+  box-shadow: 0 0.8rem 2.4rem rgba(16, 32, 27, 0.12);
+}
+
+.Toastify__toast-body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+  line-height: 1.45;
+}
+
+.Toastify__toast-icon {
+  width: 2rem;
+  margin-inline-end: 1.1rem;
+}
+
+/* A 3px left edge carries the severity, the same way a card carries its deadline. */
+.Toastify__toast--success { border-left: 0.3rem solid #0E7C5A; }
+.Toastify__toast--error   { border-left: 0.3rem solid #BC3B2C; }
+
+.Toastify__progress-bar { height: 0.2rem; }
+
+.Toastify__close-button {
+  align-self: center;
+  color: #8A9891;
+  opacity: 1;
+}
+
+.Toastify__close-button:hover,
+.Toastify__close-button:focus-visible { color: #10201B; }
